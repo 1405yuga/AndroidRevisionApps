@@ -40,18 +40,38 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:columnCount="4"
+        android:alignmentMode="alignMargins"
+        android:rowOrderPreserved="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_columnWeight="1"
             android:layout_margin="@dimen/buttons_margin"
             android:background="@drawable/screen_button"
             android:fontFamily="@font/inter"
             android:gravity="center"
+            android:layout_gravity="fill_horizontal"
+            android:minWidth="@dimen/min_clickable_size"
+            android:minHeight="@dimen/min_clickable_size"
+            android:paddingHorizontal="@dimen/button_horizontal_padding"
+            android:paddingVertical="@dimen/button_vertical_padding"
+            android:text="9"
+            android:textColor="@color/white"
+            android:textSize="@dimen/numbers_text_size" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/buttons_margin"
+            android:background="@drawable/screen_button"
+            android:fontFamily="@font/inter"
+            android:gravity="center"
+            android:layout_gravity="fill_horizontal"
             android:minWidth="@dimen/min_clickable_size"
             android:minHeight="@dimen/min_clickable_size"
             android:paddingHorizontal="@dimen/button_horizontal_padding"
@@ -60,47 +80,54 @@
             android:textColor="@color/white"
             android:textSize="@dimen/numbers_text_size" />
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_columnWeight="1"
             android:layout_margin="@dimen/buttons_margin"
             android:background="@drawable/screen_button"
+            android:fontFamily="@font/inter"
             android:gravity="center"
+            android:layout_gravity="fill_horizontal"
             android:minWidth="@dimen/min_clickable_size"
             android:minHeight="@dimen/min_clickable_size"
-            android:text="9"
-            android:textSize="@dimen/numbers_text_size"
             android:paddingHorizontal="@dimen/button_horizontal_padding"
             android:paddingVertical="@dimen/button_vertical_padding"
-            android:textColor="@color/white" />
+            android:text="9"
+            android:textColor="@color/white"
+            android:textSize="@dimen/numbers_text_size" />
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_columnWeight="1"
             android:layout_margin="@dimen/buttons_margin"
             android:background="@drawable/screen_button"
+            android:fontFamily="@font/inter"
             android:gravity="center"
+            android:layout_gravity="fill_horizontal"
             android:minWidth="@dimen/min_clickable_size"
             android:minHeight="@dimen/min_clickable_size"
-            android:text="9"
-            android:textSize="@dimen/numbers_text_size"
             android:paddingHorizontal="@dimen/button_horizontal_padding"
             android:paddingVertical="@dimen/button_vertical_padding"
-            android:textColor="@color/white" />
+            android:text="9"
+            android:textColor="@color/white"
+            android:textSize="@dimen/numbers_text_size" />
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_columnWeight="1"
             android:layout_margin="@dimen/buttons_margin"
             android:background="@drawable/screen_button"
+            android:fontFamily="@font/inter"
             android:gravity="center"
+            android:layout_gravity="fill_horizontal"
             android:minWidth="@dimen/min_clickable_size"
             android:minHeight="@dimen/min_clickable_size"
-            android:text="9"
-            android:textSize="@dimen/numbers_text_size"
             android:paddingHorizontal="@dimen/button_horizontal_padding"
             android:paddingVertical="@dimen/button_vertical_padding"
-            android:textColor="@color/white" />
+            android:text="9"
+            android:textColor="@color/white"
+            android:textSize="@dimen/numbers_text_size" />
+
 
     </GridLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
