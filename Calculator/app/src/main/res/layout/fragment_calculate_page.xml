@@ -23,6 +23,7 @@
             android:gravity="end"
             android:text="3+4"
             android:fontFamily="@font/inter"
+            android:textColor="@color/unfocused_text"
             android:textSize="@dimen/not_focus_text_size"/>
 
         <TextView
@@ -32,6 +33,7 @@
             android:gravity="end"
             android:text="7"
             android:fontFamily="@font/inter"
+            android:textColor="@color/focused_text"
             android:textSize="@dimen/focus_text_size"/>
     </LinearLayout>
 
