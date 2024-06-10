@@ -7,6 +7,7 @@
     <color name="numbers_bg">#626262</color>
     <color name="operations_bg">#FF9F0A</color>
     <color name="special_operations_bg">#E6E6E6</color>
+    <color name="special_operations_text">#1F1F1F</color>
 
     <color name="unfocused_text">#9F9B9B</color>
     <color name="focused_text">#1F1F1F</color>
