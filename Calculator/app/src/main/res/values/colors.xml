@@ -4,10 +4,10 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="app_bg">#FFFFFF</color>
-    <color name="numbers_bg">#626262</color>
-    <color name="operations_bg">#FF9F0A</color>
-    <color name="special_operations_bg">#E6E6E6</color>
-    <color name="special_operations_text">#1F1F1F</color>
+    <color name="numbers_bg">#edf2ec</color>
+    <color name="numbers_text">#4d6356</color>
+    <color name="operations_bg">#d0e8d8</color>
+    <color name="operations_text">#0a1f15</color>
 
     <color name="unfocused_text">#9F9B9B</color>
     <color name="focused_text">#1F1F1F</color>
