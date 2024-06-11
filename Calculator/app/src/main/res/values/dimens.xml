@@ -3,10 +3,6 @@
     <dimen name="min_clickable_size">48dp</dimen>
     <dimen name="fragment_margin">12dp</dimen>
 
-    <dimen name="button_vertical_padding">12dp</dimen>
-    <dimen name="button_horizontal_padding">24dp</dimen>
-    <dimen name="button_radius">1000dp</dimen>
-    <dimen name="buttons_margin">8dp</dimen>
 
     <dimen name="focus_text_size">48sp</dimen>
     <dimen name="not_focus_text_size">24sp</dimen>
