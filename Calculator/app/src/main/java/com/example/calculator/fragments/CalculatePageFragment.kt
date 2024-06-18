@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.calculator.databinding.FragmentCalculatePageBinding
 
-class CalculatePage : Fragment() {
+class CalculatePageFragment : Fragment() {
 
     private lateinit var binding: FragmentCalculatePageBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +21,7 @@ class CalculatePage : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentCalculatePageBinding.inflate(inflater,container,false)
+        binding = FragmentCalculatePageBinding.inflate(inflater, container, false)
         return binding.root
     }
 }
