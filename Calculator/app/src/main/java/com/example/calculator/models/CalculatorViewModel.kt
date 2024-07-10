@@ -14,6 +14,8 @@ class CalculatorViewModel : ViewModel() {
 
     private var currentValue: String = ""
     fun setInput(inputText: String) {
+
+        //checks if input is symbol and last value is digit
         if (inputText == "+" || inputText == "-" || inputText == "x" || inputText == "÷") {
             if (currentValue.isNotEmpty() && currentValue[currentValue.length - 1].isDigit()) {
                 currentValue += inputText
