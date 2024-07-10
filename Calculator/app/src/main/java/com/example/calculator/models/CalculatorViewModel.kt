@@ -11,4 +11,11 @@ class CalculatorViewModel : ViewModel() {
     val input : LiveData<String> get() = _input
     val output : LiveData<Double?> get() = _output
     val highlightOutput : LiveData<Boolean> get() = _highlightOutput
+
+    private var currentValue :String=""
+    fun setInput(inputText:String){
+        currentValue+=inputText
+        _input.value = currentValue
+        _highlightOutput.value = false
+    }
 }
