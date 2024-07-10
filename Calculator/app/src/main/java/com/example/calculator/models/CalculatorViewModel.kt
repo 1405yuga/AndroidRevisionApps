@@ -6,10 +6,10 @@ import androidx.lifecycle.ViewModel
 
 class CalculatorViewModel : ViewModel() {
     private val _input: MutableLiveData<String> = MutableLiveData(null)
-    private val _output: MutableLiveData<Double?> = MutableLiveData()
+    private val _output: MutableLiveData<Double> = MutableLiveData()
     private val _highlightOutput: MutableLiveData<Boolean> = MutableLiveData(false)
     val input: LiveData<String> get() = _input
-    val output: LiveData<Double?> get() = _output
+    val output: LiveData<Double> get() = _output
     val highlightOutput: LiveData<Boolean> get() = _highlightOutput
 
     private var currentValue: String = ""
@@ -34,7 +34,7 @@ class CalculatorViewModel : ViewModel() {
         currentValue = ""
     }
 
-    fun equalsClicked(){
+    fun equalsClicked() {
         _highlightOutput.value = true
     }
 }

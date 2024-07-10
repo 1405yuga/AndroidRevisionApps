@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import com.example.calculator.R
 import com.example.calculator.databinding.FragmentCalculatePageBinding
 import com.example.calculator.models.CalculatorViewModel
@@ -33,21 +32,19 @@ class CalculatePageFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         Log.d(TAG, "View created")
-        calculatorViewModel.input.observe(viewLifecycleOwner, Observer {
+        calculatorViewModel.input.observe(viewLifecycleOwner) {
             binding.inputText.text = it
-        })
+        }
 
-        calculatorViewModel.highlightOutput.observe(viewLifecycleOwner, Observer {
-            if(it){
+        calculatorViewModel.highlightOutput.observe(viewLifecycleOwner) {
+            if (it) {
                 binding.outputText.textSize = resources.getDimension(R.dimen.focus_text_size)
                 binding.inputText.textSize = resources.getDimension(R.dimen.not_focus_text_size)
-            }
-            else{
+            } else {
                 binding.outputText.textSize = resources.getDimension(R.dimen.not_focus_text_size)
                 binding.inputText.textSize = resources.getDimension(R.dimen.focus_text_size)
             }
-        })
-
+        }
         binding.apply {
             one.setOnClickListener { calculatorViewModel.setInput("1") }
             two.setOnClickListener { calculatorViewModel.setInput("2") }
