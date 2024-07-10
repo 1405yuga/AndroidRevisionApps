@@ -51,7 +51,7 @@ class CalculatePageFragment : Fragment() {
             minus.setOnClickListener { calculatorViewModel.setInput("-") }
             multiply.setOnClickListener { calculatorViewModel.setInput("x") }
             divide.setOnClickListener { calculatorViewModel.setInput("÷") }
-            equals.setOnClickListener { calculatorViewModel.setInput("=") }
+            equals.setOnClickListener { calculatorViewModel.equalsClicked() }
             clear.setOnClickListener { calculatorViewModel.clearInput() }
         }
     }

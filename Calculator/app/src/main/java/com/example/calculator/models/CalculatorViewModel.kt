@@ -25,12 +25,14 @@ class CalculatorViewModel : ViewModel() {
             _input.value = currentValue
             _highlightOutput.value = false
         }
-
-
     }
 
     fun clearInput() {
         _input.value = ""
         currentValue = ""
+    }
+
+    fun equalsClicked(){
+        _highlightOutput.value = true
     }
 }
