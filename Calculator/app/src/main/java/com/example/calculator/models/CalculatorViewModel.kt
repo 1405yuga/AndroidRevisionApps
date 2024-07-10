@@ -19,7 +19,8 @@ class CalculatorViewModel : ViewModel() {
         _highlightOutput.value = false
     }
 
-    fun clearInput(){
+    fun clearInput() {
         _input.value = ""
+        currentValue = ""
     }
 }
