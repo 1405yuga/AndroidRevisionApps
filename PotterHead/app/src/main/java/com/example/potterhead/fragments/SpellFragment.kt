@@ -7,12 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.example.potterhead.databinding.FragmentViewDataBinding
+import com.example.potterhead.databinding.FragmentSpellBinding
 import com.example.potterhead.entity.SpellViewModel
 
-class ViewDataFragment : Fragment() {
+class SpellFragment : Fragment() {
 
-    private lateinit var binding: FragmentViewDataBinding
+    private lateinit var binding: FragmentSpellBinding
     private val viewModel by viewModels<SpellViewModel>()
     private  val TAG = this.javaClass.name
 
@@ -21,7 +21,7 @@ class ViewDataFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentViewDataBinding.inflate(inflater, container, false)
+        binding = FragmentSpellBinding.inflate(inflater, container, false)
         return binding.root
     }
 
