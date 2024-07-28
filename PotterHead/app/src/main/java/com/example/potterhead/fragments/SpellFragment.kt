@@ -30,14 +30,22 @@ class SpellFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        viewModel.getSpellsList()
         binding.spellRecyclerView.adapter = spellAdapter
-
         viewModel.spellsList.observe(viewLifecycleOwner) {
             Log.d(TAG, "Spells List : $it")
             spellAdapter.submitList(it)
         }
+
+        viewModel.isDataLoading.observe(viewLifecycleOwner) {
+            if (it == true) {
+                binding.spellRecyclerView.visibility = View.GONE
+                binding.dataLoadingProgress.visibility = View.VISIBLE
+            } else {
+                binding.spellRecyclerView.visibility = View.VISIBLE
+                binding.dataLoadingProgress.visibility = View.GONE
+            }
+        }
+        viewModel.getSpellsList()
 
     }
 }
