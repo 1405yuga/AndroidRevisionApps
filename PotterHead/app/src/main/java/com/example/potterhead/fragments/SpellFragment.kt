@@ -38,14 +38,25 @@ class SpellFragment : Fragment() {
 
         viewModel.isDataLoading.observe(viewLifecycleOwner) {
             if (it == true) {
-                binding.spellRecyclerView.visibility = View.GONE
+                binding.dataLayout.visibility = View.GONE
                 binding.dataLoadingProgress.visibility = View.VISIBLE
             } else {
-                binding.spellRecyclerView.visibility = View.VISIBLE
+                binding.dataLayout.visibility = View.VISIBLE
                 binding.dataLoadingProgress.visibility = View.GONE
             }
         }
-        viewModel.getSpellsList()
 
+        viewModel.errorText.observe(viewLifecycleOwner) {
+            Log.d(TAG, "errorText :${it}")
+            if (it.isNullOrBlank()) {
+                binding.spellRecyclerView.visibility = View.VISIBLE
+                binding.errorText.visibility = View.INVISIBLE
+            } else {
+                binding.errorText.text = it
+                binding.spellRecyclerView.visibility = View.INVISIBLE
+                binding.errorText.visibility = View.VISIBLE
+            }
+        }
+        viewModel.getSpellsList()
     }
 }
