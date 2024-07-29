@@ -15,19 +15,21 @@ class SpellViewModel : ViewModel() {
     val spellsList: LiveData<List<Spell>> = _spellsList
     private val _isDataLoading = MutableLiveData<Boolean>(true)
     val isDataLoading: LiveData<Boolean> = _isDataLoading
-
+    private val _errorText = MutableLiveData<String?>(null)
+    val errorText: LiveData<String?> = _errorText
 
     fun getSpellsList() {
         _isDataLoading.value = true
         viewModelScope.launch {
             try {
-                _spellsList.value = PotterApiService.retrofitApiService.getAllSpells()
-                Log.d(TAG, "List received : ${spellsList.value?.size}")
+                val spells = PotterApiService.retrofitApiService.getAllSpells()
+                Log.d(TAG, "List received : ${spells.size}")
+                _spellsList.value = spells
+                _errorText.value = if (spells.isEmpty()) "No data" else null
             } catch (e: Exception) {
+                _errorText.value = "Unable to load spells"
                 Log.d(TAG, "ERROR : " + e.message)
-            }
-            finally {
-
+            } finally {
                 _isDataLoading.value = false
             }
         }
