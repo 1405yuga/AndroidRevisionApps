@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import com.example.potterhead.R
 import com.example.potterhead.adapter.SpellAdapter
 import com.example.potterhead.databinding.FragmentSpellBinding
 import com.example.potterhead.entity.SpellViewModel
@@ -58,5 +59,15 @@ class SpellFragment : Fragment() {
             }
         }
         viewModel.getSpellsList()
+        binding.topAppBar.setOnMenuItemClickListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.refreshList -> {
+                    viewModel.getSpellsList()
+                    true
+                }
+
+                else -> false
+            }
+        }
     }
 }
