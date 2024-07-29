@@ -28,7 +28,7 @@ class SpellViewModel : ViewModel() {
                 _errorText.value = if (spells.isEmpty()) "No data" else null
             } catch (e: Exception) {
                 _errorText.value = "Unable to load spells"
-                Log.d(TAG, "ERROR : " + e.message)
+                e.printStackTrace()
             } finally {
                 _isDataLoading.value = false
             }
