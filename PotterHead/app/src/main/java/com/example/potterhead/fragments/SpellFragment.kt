@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.potterhead.R
@@ -31,6 +32,24 @@ class SpellFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setState()
+        applyBinding()
+        viewModel.runTest()
+    }
+
+    private fun setState() {
+        viewModel.setTestLambda(
+            lambda = {
+                Toast.makeText(
+                    requireContext(),
+                    "hello from Yuga",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+        )
+    }
+
+    private fun applyBinding() {
         binding.spellRecyclerView.adapter = spellAdapter
         viewModel.spellsList.observe(viewLifecycleOwner) {
             Log.d(TAG, "Spells List : $it")
