@@ -1,8 +1,6 @@
 package com.example.potterhead.entity
 
 import android.util.Log
-import android.widget.Toast
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -38,19 +36,16 @@ class SpellViewModel : ViewModel() {
         }
     }
 
-    private var isRunning = false
-
-    private var _testLambda: (() -> Unit)? = null
-    private val testLambda: (() -> Unit)? get() = _testLambda
-    fun setTestLambda(lambda: () -> Unit) {
-        this._testLambda = lambda
-    }
+    val testState: TestState = TestState(
+        isRunning = false,
+        testLambda = null
+    )
 
     fun runTest() {
-        if (isRunning) {
+        if (testState.isRunning) {
             Log.d(TAG, "Already running")
         } else {
-            this.isRunning = true
+            this.testState.isRunning = true
             viewModelScope.launch {
                 repeat(
                     times = 10,
@@ -59,9 +54,18 @@ class SpellViewModel : ViewModel() {
                         Log.d(TAG, "c = $it")
                     }
                 )
-                testLambda!!.invoke()
-                this@SpellViewModel.isRunning = false
+                this@SpellViewModel.testState.testLambda!!.invoke()
+                this@SpellViewModel.testState.isRunning = false
             }
         }
+    }
+}
+
+data class TestState(
+    var isRunning: Boolean,
+    var testLambda: (() -> Unit)?
+) {
+    fun setState(lambda: () -> Unit) {
+        this.testLambda = lambda
     }
 }

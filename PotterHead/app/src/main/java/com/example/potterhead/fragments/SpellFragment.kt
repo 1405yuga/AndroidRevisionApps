@@ -38,7 +38,7 @@ class SpellFragment : Fragment() {
     }
 
     private fun setState() {
-        viewModel.setTestLambda(
+        viewModel.testState.setState(
             lambda = {
                 Toast.makeText(
                     requireContext(),
