@@ -1,24 +1,35 @@
 package com.example.listapp.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.listapp.R
+import androidx.fragment.app.Fragment
+import com.example.listapp.adapter.NumbersAdapter
+import com.example.listapp.databinding.FragmentNumbersListBinding
 
 class NumbersListFragment : Fragment() {
 
+
+    private lateinit var binding: FragmentNumbersListBinding
+    private lateinit var numbersAdapter: NumbersAdapter
+    private val numbers: List<Int> = (1..10).toList()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_numbers_list, container, false)
+        binding = FragmentNumbersListBinding.inflate(inflater, container, false)
+        numbersAdapter = NumbersAdapter()
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+
+        numbersAdapter.submitList(numbers)
+
+        binding.recyclerView.adapter = numbersAdapter
     }
 }
