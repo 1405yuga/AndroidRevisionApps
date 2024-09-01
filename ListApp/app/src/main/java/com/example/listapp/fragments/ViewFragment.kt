@@ -12,7 +12,6 @@ class ViewFragment : Fragment() {
 
     private lateinit var binding: FragmentViewBinding
     private var selectedNumber: Int = 0
-    private val TAG = this.javaClass.simpleName
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

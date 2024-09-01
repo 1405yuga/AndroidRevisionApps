@@ -19,7 +19,6 @@ class NumbersListFragment : Fragment() {
     private val numbers: List<Int> = (0..10).toList()
     private val TAG = this.javaClass.simpleName
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
