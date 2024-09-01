@@ -16,7 +16,7 @@ class NumbersListFragment : Fragment() {
 
     private lateinit var binding: FragmentNumbersListBinding
     private lateinit var numbersAdapter: NumbersAdapter
-    private val numbers: List<Int> = (1..10).toList()
+    private val numbers: List<Int> = (0..10).toList()
     private val TAG = this.javaClass.simpleName
 
 
@@ -25,11 +25,7 @@ class NumbersListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentNumbersListBinding.inflate(inflater, container, false)
-        numbersAdapter = NumbersAdapter() { numberSelected ->
-            Log.d(TAG, "number selected :$numberSelected")
-            findNavController().navigate(R.id.viewFragment)
-
-        }
+        numbersAdapter = NumbersAdapter(onNumberClick)
         return binding.root
     }
 
@@ -39,5 +35,12 @@ class NumbersListFragment : Fragment() {
         numbersAdapter.submitList(numbers)
 
         binding.recyclerView.adapter = numbersAdapter
+    }
+
+    private val onNumberClick: (Int) -> (Unit) = { numberSelected ->
+        Log.d(TAG, "number selected :$numberSelected")
+        findNavController().navigate(
+            resId = R.id.viewFragment,
+            args = Bundle().apply { putInt("NUMBER", numberSelected) })
     }
 }
