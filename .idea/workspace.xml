@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="046c8875-ba4b-4f92-bb5b-6da72cccd4ca" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/AndroidRevisionApps.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PotterHead/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PotterHead/.idea/appInsightsSettings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PotterHead/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PotterHead/.idea/deploymentTargetSelector.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PotterHead/.idea/kotlinc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PotterHead/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PotterHead/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PotterHead/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/PotterHead/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ListApp/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/ListApp/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ListApp/app/src/main/java/com/example/listapp/fragments/ViewFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ListApp/app/src/main/java/com/example/listapp/fragments/ViewFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ListApp/app/src/main/res/layout/fragment_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ListApp/app/src/main/res/layout/fragment_view.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ListApp/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ListApp/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ListApp/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/ListApp/gradle/libs.versions.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,22 +23,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "1405yuga"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;1405yuga&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/1405yuga/AndroidRevisionApps.git",
-    "accountId": "01e5ec68-fbfe-4122-8a7c-27bb25be79d2"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/1405yuga/AndroidRevisionApps.git&quot;,
+    &quot;accountId&quot;: &quot;01e5ec68-fbfe-4122-8a7c-27bb25be79d2&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 2
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2lPDKVsq6TjoAAV1HIAPrOF1N37" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -59,8 +54,9 @@
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Android kotlin/AndroidRevisionApps/ListApp",
-    "settings.editor.selected.configurable": "AndroidSdkUpdater"
+    "last_opened_file_path": "D:/Android kotlin/AndroidRevisionApps/PotterHead",
+    "settings.editor.selected.configurable": "AndroidSdkUpdater",
+    "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.listapp"
+    namespace = "com.example.alphabetslistapp"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.listapp"
+        applicationId = "com.example.alphabetslistapp"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -33,6 +33,7 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
     buildFeatures { viewBinding = true }
 }
 
@@ -43,10 +44,8 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    implementation(libs.androidx.navigation.runtime.ktx)
-    implementation(libs.androidx.navigation.fragment)
+    implementation(libs.androidx.navigation.fragment.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation(libs.coil)
 }
