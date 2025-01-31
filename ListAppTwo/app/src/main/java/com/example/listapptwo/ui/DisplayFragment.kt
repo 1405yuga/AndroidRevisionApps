@@ -6,19 +6,32 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.example.listapptwo.R
+import com.example.listapptwo.adapter.BookAdapter
+import com.example.listapptwo.databinding.FragmentDisplayBinding
 
 class DisplayFragment : Fragment() {
 
     private val viewModel: BookViewModel by viewModels()
+    private lateinit var binding: FragmentDisplayBinding
+    private lateinit var bookAdapter: BookAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-        viewModel.getBooksList()
-        return inflater.inflate(R.layout.fragment_display, container, false)
+        binding = FragmentDisplayBinding.inflate(layoutInflater)
+        return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel.getBooksList()
+        bookAdapter = BookAdapter()
+        binding.recyclerView.adapter = bookAdapter
+
+        viewModel.books.observe(viewLifecycleOwner) {
+            bookAdapter.submitList(it)
+        }
+    }
 }
