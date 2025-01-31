@@ -4,16 +4,16 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 
-const val BASE_URL = "https://stephen-king-api.onrender.com/api/books"
+const val BASE_URL = "https://stephen-king-api.onrender.com/api/"
 
-val retrofitBuilder = Retrofit.Builder()
+private val retrofitBuilder = Retrofit.Builder()
     .baseUrl(BASE_URL)
     .addConverterFactory(GsonConverterFactory.create())
     .build()
 
 interface BookApiService {
-    @GET
-    suspend fun getAllBooks()
+    @GET("books")
+    suspend fun getAllBooks(): BookResult
 }
 
 object BookApi {
